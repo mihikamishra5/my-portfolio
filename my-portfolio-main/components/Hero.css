@@ -1,0 +1,89 @@
+.hero {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-left {
+  width: 40%;
+  min-width: 320px;
+  background-color: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--accent-purple);
+}
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.social-icons a {
+  color: var(--text-light);
+  transition: color var(--transition-speed);
+  font-size: 1.5rem;
+}
+.social-icons a:hover {
+  color: var(--accent-purple);
+}
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.hero-left h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--accent-purple);
+  margin-bottom: 2rem;
+}
+.hero-right {
+  flex: 1;
+  background-color: var(--accent-purple);
+  position: relative;
+}
+.hero-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='1600' height='900' viewBox='0 0 1600 900' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%238a2be2' d='M0 0h1600v900H0z'/%3E%3Cpath d='M1203 253c-82 29-107 69-156 75-53 8-110-27-179-9-91 24-82 109-148 152-81 55-202-20-249 35-30 34-5 111-12 153-11 73-119 115-148 117H1600V0h-258c-23 28-47 71-95 84-51 13-79 26-90 40-23 29-25 69-44 85-22 17-66 9-86 3z' fill='%23a86fe7' /%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(10deg) translateY(-10%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-left {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .hero-right {
+    width: 100%;
+    height: 400px;
+  }
+  .hero-wave {
+    transform: rotate(0) translateY(0);
+  }
+}

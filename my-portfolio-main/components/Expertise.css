@@ -1,0 +1,22 @@
+.expertise-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.expertise-text {
+  margin-bottom: 2rem;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.skill-pill {
+  background-color: rgba(138, 43, 226, 0.2);
+  border: 1px solid var(--accent-purple);
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  white-space: nowrap;
+}
